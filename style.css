@@ -405,3 +405,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background: conic-gradient(var(--colorPrimary ) 360deg, #ededed 0deg);
 }
 /* -------------------- /backToTop-------------------------- */
+
+/* -------------------- Header Menu -------------------------- */
+.header-menu[data-hidden="true"] {
+  display: none !important;
+}
+/* -------------------- /Header Menu ------------------------- */
+
+/* -------------------- Home Menu Items -------------------------- */
+.home-menu-item {
+  visibility: hidden; /* Initially hidden, will be shown by JS animation */
+}
+/* -------------------- /Home Menu Items ------------------------- */

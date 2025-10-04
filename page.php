@@ -10,7 +10,7 @@ if(!is_user_logged_in() && $pagename == 'my-account') {
     <div class="content">
         <?php while(have_posts()) : the_post(); ?>
 
-        <h1 class="mb-5 font-bold text-xl md:text-2xl text-white-100">
+        <h1 class="mb-5 font-bold text-xl md:text-2xl">
             <?php the_title(); ?>
         </h1> 
 

@@ -2,9 +2,10 @@
     $lang = get_current_lang();
 ?>
 
-        <img class="w-auto h-[400px]" src='<?php echo get_template_directory_uri().'/images/border.png'?>'/>
-    </div>
+            <img class="w-auto h-[400px] mr-2" src='<?php echo get_template_directory_uri().'/images/border.png'?>'/>
+        </div>
 
+        </div>
     </div>
 </main>
 

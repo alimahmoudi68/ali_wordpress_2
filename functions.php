@@ -26,12 +26,19 @@ function add_theme_scripts(){
 
 
 
+	// Enqueue index.js on all pages (needed for SPA navigation)
+	wp_enqueue_script('index', get_template_directory_uri() . '/js/index.js' , array() , false , true );
+	
 	if ( is_home() ) {
 		wp_enqueue_script('typewriter', get_template_directory_uri() . '/js/typewriter.js' , array() , false , true );
 		wp_enqueue_script('swiper.min', get_template_directory_uri() . '/js/swiper.min.js' , array() , false , true );
 		wp_enqueue_style('swiper.min' , get_template_directory_uri().'/css/swiper.min.css' , array() , false , 'all');
-		wp_enqueue_script('index', get_template_directory_uri() . '/js/index.js' , array('swiper.min') , false , true );
 	}
+	
+	// Pass basePath (works for subfolder installs like /portfolio)
+	wp_localize_script('master', 'themeGlobals', array(
+		'basePath' => parse_url(home_url(), PHP_URL_PATH),
+	));
 
 
 	   if (is_singular('portfolio')) {

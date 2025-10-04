@@ -27,6 +27,18 @@
 <main class='w-full h-full flex flex-col justify-center grow'>
     <div class="container mx-auto px-5">
 
-    <div class="flex justify-center items-center min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-180px)]">
-        <img class="w-auto h-[400px]" src='<?php echo get_template_directory_uri().'/images/border.png'?>'/>
+        <div class="flex flex-col justify-between items-center gap-y-5">
+            <img src="<?php echo get_template_directory_uri().'/images/logo.png'?>" alt="logo" class="w-20 h-20">
+            <div class="header-menu flex items-center gap-x-5 fixed top-[200px] " style="display: none;" data-hidden="true">
+            <a href="<?php echo make_url(get_current_lang(), '/'); ?>" class="text-lg mx-2">صفحه اصلی</a>
+                <a href="<?php echo make_url(get_current_lang(), '/about'); ?>" class="text-lg mx-2">درباره من</a>
+                <a href="<?php echo make_url(get_current_lang(), '/projects'); ?>" class="text-lg mx-2">پروژه‌ها</a>
+                <a href="<?php echo make_url(get_current_lang(), '/resume'); ?>" class="text-lg mx-2">روزمه کامل</a>
+                <a href="<?php echo make_url(get_current_lang(), '/contact'); ?>" class="text-lg mx-2">تماس با من</a>
+            </div>
+        </div>
+    
+        <div class="flex justify-center items-center min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-180px)]">
+            <img class="w-auto h-[400px] ml-2" src='<?php echo get_template_directory_uri().'/images/border.png'?>'/>
+        
 
